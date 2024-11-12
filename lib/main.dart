@@ -1,4 +1,3 @@
-import 'package:animation/implicit_examples/animated_color_pallete.dart';
 import 'package:animation/implicit_examples/animated_shopping_cart_button.dart';
 import 'package:flutter/material.dart';
 
