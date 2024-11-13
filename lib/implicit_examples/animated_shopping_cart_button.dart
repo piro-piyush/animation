@@ -23,8 +23,8 @@ class _ShoppingCartButtonState extends State<ShoppingCartButton> {
             });
           },
           child: AnimatedContainer(
-            curve: Curves.slowMiddle,
-            duration: const Duration(milliseconds: 1000),
+            curve: Curves.linear,
+            duration: const Duration(milliseconds: 500),
             width: isSelected ? 250 : 80,
             height: 80.0,
             decoration: BoxDecoration(
@@ -41,12 +41,16 @@ class _ShoppingCartButtonState extends State<ShoppingCartButton> {
                   color: Colors.white,
                 ),
                 if (isSelected)
-                  const Text(
-                    "Added to Cart",
-                    style: TextStyle(
-                        fontSize: 14,
-                        color: Colors.white,
-                        fontWeight: FontWeight.bold),
+                  AnimatedOpacity(
+                    opacity: isSelected ? 1 : 0,
+                    duration: const Duration(milliseconds: 500),
+                    child: const Text(
+                      "Added to Cart",
+                      style: TextStyle(
+                          fontSize: 14,
+                          color: Colors.white,
+                          fontWeight: FontWeight.bold),
+                    ),
                   )
               ],
             ),
