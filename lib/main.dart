@@ -1,4 +1,4 @@
-import 'package:animation/explicit_examples/loading_animation.dart';
+import 'package:animation/page_route_builder_animation/splash_animation.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -11,12 +11,11 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Demo',
-      theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
-        useMaterial3: true,
-      ),
-      home: const RadialProgressAnimation(progress: 0.55, color: Colors.blue),
-    );
+        title: 'Flutter Demo',
+        theme: ThemeData(
+          colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
+          useMaterial3: true,
+        ),
+        home: const SplashAnimation());
   }
 }
